@@ -26,7 +26,7 @@ public class CreatingNewInvoice {
 	private WebElement organizationNameLoopUpButton;
 	
 	@FindBy(xpath = "//img[@title='Products']")
-	private List<WebElement> itemNameLookUpButton;
+	private WebElement itemNameLookUpButton;
 	
 	@FindBy(xpath = "(//input[@class='small '])[1]")
 	private WebElement quantityTextField;
@@ -82,6 +82,13 @@ public class CreatingNewInvoice {
 	@FindBy(xpath = "//input[@name='listPrice1']/../img")
 	private WebElement listPriceLookUp;
 	
+	@FindBy(xpath = "//span[text()='No Price Books Found !']")
+	private WebElement listPriceText;
+	
+	public WebElement getListPriceText() {
+		return listPriceText;
+	}
+
 	public WebElement getSubjectTextField() {
 		return subjectTextField;
 	}
@@ -102,7 +109,7 @@ public class CreatingNewInvoice {
 		return organizationNameLoopUpButton;
 	}
 
-	public List<WebElement> getItemNameLookUpButton() {
+	public WebElement getItemNameLookUpButton() {
 		return itemNameLookUpButton;
 	}
 

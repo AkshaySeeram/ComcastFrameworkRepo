@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-08T09:21:29Z" name="Default suite" finished-at="2023-09-08T09:21:39Z" duration-ms="10081">
+  <suite started-at="2023-09-09T09:50:13Z" name="Default suite" finished-at="2023-09-09T09:50:33Z" duration-ms="20023">
     <groups>
     </groups>
-    <test started-at="2023-09-08T09:21:29Z" name="Default test" finished-at="2023-09-08T09:21:39Z" duration-ms="10081">
-      <class name="com.comcast.crm.invoicetest.TC_09">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:29Z" name="configBS" finished-at="2023-09-08T09:21:29Z" duration-ms="26" status="PASS">
+    <test started-at="2023-09-09T09:50:13Z" name="Default test" finished-at="2023-09-09T09:50:33Z" duration-ms="20023">
+      <class name="com.comcast.crm.invoicetest.TC_11_Test">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:12Z" name="configBS" finished-at="2023-09-09T09:50:13Z" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:29Z" name="configBC" finished-at="2023-09-08T09:21:31Z" duration-ms="1658" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:13Z" name="configBC" finished-at="2023-09-09T09:50:15Z" duration-ms="2321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:31Z" name="configBM" finished-at="2023-09-08T09:21:33Z" duration-ms="2274" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:15Z" name="configBM" finished-at="2023-09-09T09:50:20Z" duration-ms="4665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createInvoiceWith_Price_List()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:33Z" name="createInvoiceWith_Price_List" finished-at="2023-09-08T09:21:38Z" duration-ms="5116" status="PASS">
+        <test-method signature="delete_MultipleInvoiceDetails_fromListView()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:20Z" name="delete_MultipleInvoiceDetails_fromListView" finished-at="2023-09-09T09:50:30Z" duration-ms="10730" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createInvoiceWith_Price_List -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:38Z" name="configAM" finished-at="2023-09-08T09:21:39Z" duration-ms="885" status="PASS">
+        </test-method> <!-- delete_MultipleInvoiceDetails_fromListView -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:30Z" name="configAM" finished-at="2023-09-09T09:50:32Z" duration-ms="2071" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:39Z" name="configAC" finished-at="2023-09-08T09:21:39Z" duration-ms="132" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:32Z" name="configAC" finished-at="2023-09-09T09:50:33Z" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.invoicetest.TC_09@4b520ea8]" started-at="2023-09-08T09:21:39Z" name="configAS" finished-at="2023-09-08T09:21:39Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.invoicetest.TC_11_Test@4b520ea8]" started-at="2023-09-09T09:50:33Z" name="configAS" finished-at="2023-09-09T09:50:33Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.comcast.crm.invoicetest.TC_09 -->
+      </class> <!-- com.comcast.crm.invoicetest.TC_11_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
