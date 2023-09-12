@@ -28,7 +28,7 @@ public class CreatingNewInvoice {
 	@FindBy(xpath = "//img[@title='Products']")
 	private WebElement itemNameLookUpButton;
 	
-	@FindBy(xpath = "(//input[@class='small '])[1]")
+	@FindBy(name = "qty1")
 	private WebElement quantityTextField;
 	
 	@FindBy(xpath = "//input[@value='Add Product']")
@@ -37,7 +37,7 @@ public class CreatingNewInvoice {
 	@FindBy(xpath = "//input[@value='Add Service']")
 	private WebElement addServiceButton;
 	
-	@FindBy(xpath = "(//input[@value='  Save  '])[1]")
+	@FindBy(xpath = "(//input[@value='  Save  '])[2]")
 	private WebElement saveButton;
 	
 	@FindBy(xpath = "(//input[@value='  Cancel  '])[1]")

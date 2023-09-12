@@ -16,7 +16,7 @@ public class InvoicePage {
 	@FindBy(xpath = "//img[@alt='Create Invoice...']")
 	private WebElement createInvoice;
 	
-	@FindBy(xpath = "//a[text()='Invoice No']/../../../tr/td[2]")
+	@FindBy(xpath = "//input[@name='selected_id']")
 	private List<WebElement> selectCheckBox;
 	
 	@FindBy(xpath = "(//input[@value='Delete'])[1]")

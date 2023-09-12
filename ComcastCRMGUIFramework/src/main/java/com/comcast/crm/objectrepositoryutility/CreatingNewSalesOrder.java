@@ -28,6 +28,20 @@ public class CreatingNewSalesOrder {
 	@FindBy(xpath = "(//img[@align='absmiddle'])[6]")
 	private WebElement organizationNameLookUp;
 	
+	@FindBy(xpath = "(//table[@class='small'])[3]/tbody/tr/td[2]/a")
+	private List<WebElement> selectItemName;
+	
+	@FindBy(xpath = "(//input[@type='submit'])[2]")
+	private WebElement saveButton;
+	
+	public WebElement getSaveButton() {
+		return saveButton;
+	}
+
+	public List<WebElement> getSelectItemName() {
+		return selectItemName;
+	}
+
 	public WebElement getQuantityTextField() {
 		return quantityTextField;
 	}

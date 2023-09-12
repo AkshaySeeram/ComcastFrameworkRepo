@@ -11,10 +11,10 @@ import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.InvoicePage;
 
 @Listeners(com.comcast.crm.generic.listenerutility.ListImpClass.class)
-public class TC_11_Test extends BaseClass{
-	
+public class TC_12_Test extends BaseClass{
+
 	@Test
-	public void delete_MultipleInvoiceDetails_fromListView() throws InterruptedException {
+	public void MassEdit_MultipleInvoiceDetails() throws Throwable {
 		UtilityClassObject.getTest().log(Status.PASS,"Login Successfull");
 		HomePage home=new HomePage(driver);
 		WebDriverUtility web=new WebDriverUtility();
@@ -22,12 +22,18 @@ public class TC_11_Test extends BaseClass{
 		home.getInvoiceLink().click();
 		UtilityClassObject.getTest().log(Status.PASS,"Navigated To Invoice Page");
 		InvoicePage invoice=new InvoicePage(driver);
+		invoice.getSelectCheckBox().get(0).click();
 		invoice.getSelectCheckBox().get(1).click();
 		Thread.sleep(2000);
-		invoice.getSelectCheckBox().get(2).click();
-		invoice.getDeleteButton().click();
+		invoice.getMassEditButton().click();
 		Thread.sleep(2000);
+		invoice.getMassEditSubjectTextField().sendKeys(eLib.getDataFromExcel("Akshay",1,1));
+		invoice.getMassEditOrganizationLookUp().click();
+		web.switchToTabOnURL(driver, "Accounts&action");
+		invoice.getSelectMassEditOrganizationName().get(3).click();
 		web.switchtoAlertAndAccept(driver);
+		web.switchToTabOnURL(driver, "Invoice&action");
+		invoice.getMassEditSaveButton().click();
 		Thread.sleep(3000);
 	}
 	

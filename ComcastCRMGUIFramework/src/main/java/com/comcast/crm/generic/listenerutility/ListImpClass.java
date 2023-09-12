@@ -67,6 +67,7 @@ public class ListImpClass implements ITestListener , ISuiteListener{
 
 	public void onTestFailure(ITestResult result) {
 		String testNAme = result.getMethod().getMethodName();		
+		UtilityClassObject.getTest().log(Status.INFO,result.getThrowable());
 		TakesScreenshot eDriver = (TakesScreenshot) BaseClass.sdriver;
 		String filePath = eDriver.getScreenshotAs(OutputType.BASE64);
 		

@@ -3,17 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.comcast.crm.invoicetest.TC_09">
+      <class name="com.comcast.crm.invoicetest.PreConditions">
         <methods>
           <include name="configBM"/>
-          <include name="createInvoiceWith_Price_List"/>
+          <include name="createProduct"/>
           <include name="configAM"/>
           <include name="configBS"/>
           <include name="configBC"/>
+          <include name="createSalesOrder"/>
           <include name="configAS"/>
           <include name="configAC"/>
+          <include name="createOrganization"/>
         </methods>
-      </class> <!-- com.comcast.crm.invoicetest.TC_09 -->
+      </class> <!-- com.comcast.crm.invoicetest.PreConditions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

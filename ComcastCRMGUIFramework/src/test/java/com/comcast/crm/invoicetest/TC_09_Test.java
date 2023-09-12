@@ -1,27 +1,32 @@
 package com.comcast.crm.invoicetest;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.comcast.crm.generic.basetest.BaseClass;
+import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.CreatingNewInvoice;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.InvoicePage;
 
+@Listeners(com.comcast.crm.generic.listenerutility.ListImpClass.class)
 public class TC_09_Test extends BaseClass{
 	
 	@Test
 	public void createInvoiceWith_Price_List() throws Throwable {
+		UtilityClassObject.getTest().log(Status.PASS,"Login Successfull");
 		HomePage home=new HomePage(driver);
 		WebDriverUtility web=new WebDriverUtility();
 		web.mousemoveOnElement(driver, home.getMoreLink());
 		home.getInvoiceLink().click();
-		
+		UtilityClassObject.getTest().log(Status.PASS,"Navigated To Invoice Page");
 		InvoicePage invoice=new InvoicePage(driver);
 		invoice.getCreateInvoice().click();
-		
+		UtilityClassObject.getTest().log(Status.PASS,"Navigated To Create Invoice Page");
 		CreatingNewInvoice createInvoice=new CreatingNewInvoice(driver);
-		createInvoice.getSubjectTextField().sendKeys(eLib.getDataFromExcel("Akshay",1,0));
+		createInvoice.getSubjectTextField().sendKeys(eLib.getDataFromExcel("Akshay",1,0)+jLib.getRandomNumber());
 		createInvoice.getContactNameLookUpButton().click();
 		web.switchToTabOnURL(driver, "Contacts&action");
 		createInvoice.getSelectContactName().get(1).click();
@@ -61,7 +66,9 @@ public class TC_09_Test extends BaseClass{
 			System.out.println(" List Price Is Available Select One ");
 		}
 		web.switchToTabOnURL(driver, "Invoice&action");
-		createInvoice.getSaveButton();
+		web.scrollByView(driver,createInvoice.getSaveButton());
+		createInvoice.getSaveButton().click();
+		UtilityClassObject.getTest().log(Status.PASS,"Invoice Created Successfully");
 		Thread.sleep(3000);
 	}
 
